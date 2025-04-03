@@ -22,7 +22,17 @@ class SquareCustomPainter extends CustomPainter {
 
     final side = size.shortestSide * 0.8;
 
+    // Using fromCenter(/*...*/) API
+    // canvas.drawRect(Rect.fromCircle(center: center, radius: side / 2), paint);
+
+    // Using fromCenter(/*...*/) API
     canvas.drawRect(Rect.fromCenter(center: center, width: side, height: side), paint);
+
+    // Using fromPoints(/*...*/) API with manual centering of the canvas
+    /*canvas.save();
+    canvas.translate(center.dx, center.dy);
+    canvas.drawRect(Rect.fromPoints(Offset(-side / 2, -side / 2), Offset(side / 2, side / 2)), paint);
+    canvas.restore();*/
   }
 
   @override
