@@ -5,7 +5,7 @@ class Square extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ColoredBox(color: Colors.white, child: SizedBox.expand(child: CustomPaint()));
+    return ColoredBox(color: Colors.white, child: SizedBox.expand(child: CustomPaint(painter: SquareCustomPainter())));
   }
 }
 
