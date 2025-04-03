@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:generative_art/square.dart';
-import 'package:generative_art/themes.dart';
+import 'package:generative_art/styles/themes.dart';
+import 'package:generative_art/vera_molnar/square.dart';
+import 'package:generative_art/vera_molnar/squares_grid.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 void main() {
@@ -38,6 +39,21 @@ class WidgetBookApp extends StatelessWidget {
                           width: MediaQuery.of(context).size.width,
                           height: MediaQuery.of(context).size.height,
                           child: Square(),
+                        );
+                      },
+                    ),
+                  ],
+                ),
+                WidgetbookComponent(
+                  name: "SquareGrid",
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: "Playground",
+                      builder: (context) {
+                        return SizedBox(
+                          width: MediaQuery.of(context).size.width,
+                          height: MediaQuery.of(context).size.height,
+                          child: SquaresGrid(),
                         );
                       },
                     ),
